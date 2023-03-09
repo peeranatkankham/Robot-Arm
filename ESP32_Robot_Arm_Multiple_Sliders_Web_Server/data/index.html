@@ -1,0 +1,73 @@
+<!-- Complete project details: https://randomnerdtutorials.com/esp32-web-server-websocket-sliders/ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ESP IOT DASHBOARD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="topnav">
+        <h1>Servo Control</h1>
+    </div>
+    <div class="content">
+        <div class="card-grid">
+            <div class="card">
+                <p class="card-title">Base</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider1" min="0" max="180" step="1" value ="180" class="slider">
+                </p>
+				<p class="state">Position: <span id="sliderValue1"></span> </p>
+            </div>
+            <div class="card">
+                <p class="card-title"> Joint 2</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider2" min="50" max="180" step="1" value ="150" class="slider">
+                </p>
+				<p class="state">Servo Position: <span id="sliderValue2"></span> </p>
+            </div>
+            <div class="card">
+                <p class="card-title"> Joint 3</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider3" min="0" max="180" step="1" value ="70" class="slider">
+                </p>
+				<p class="state">Servo Position: <span id="sliderValue3"></span> </p>
+            </div>
+			<div class="card">
+                <p class="card-title"> Joint 4</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider4" min="0" max="180" step="1" value ="90" class="slider">
+                </p>
+				<p class="state">Servo Position: <span id="sliderValue4"></span> </p>
+            </div>
+			<div class="card">
+                <p class="card-title"> Joint 5</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider5" min="0" max="180" step="1" value ="90" class="slider">
+                </p>
+				<p class="state">Servo Position: <span id="sliderValue5"></span> </p>
+            </div>
+			<div class="card">
+                <p class="card-title"> Joint 6</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider6" min="0" max="180" step="1" value ="90" class="slider">
+                </p>
+				<p class="state">Servo Position: <span id="sliderValue6"></span> </p>
+            </div>
+			<div class="card">
+                <p class="card-title"> Gripper</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider7" min="0" max="180" step="1" value ="90" class="slider">
+                </p>
+				<p class="state">Servo Position: <span id="sliderValue7"></span> </p>
+            </div>
+			<div class="card">
+				<p><button id="resetrobot" class="button">Reset</button></p>
+			  </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
